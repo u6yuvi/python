@@ -5,6 +5,7 @@ import random
 import os
 import math
 from decimal import *
+import sys
 
 import session4
 from session4 import Qualean
@@ -59,6 +60,7 @@ def test_indentations():
     significant indenting.'''
     lines = inspect.getsource(session4)
     spaces = re.findall('\n +.', lines)
+    print(spaces)
     for space in spaces:
         assert len(space) % 4 == 2, "Your script contains misplaced indentations"
         assert len(re.sub(r'[^ ]', '', space)) % 4 == 0, "Your code indentation does not follow PEP8 guidelines"
@@ -82,17 +84,18 @@ def test_function_qualean_type():
 
 def test_qualean_decimal_precision():
     q = session4.Qualean().return_qualean()
+    print("q",q)
     if q != 0:
         assert len(str(q).split('.')[-1]) == 10, 'Rounding to specified precision is not happening'
     else:
         assert len(str(q).split('.')[-1]) == 1, 'Rounding to specified precision is not happening'
 
 def test_function_count():
-    functions = inspect.getmembers(test_session4, inspect.isfunction)
+    functions = inspect.getmembers(sys.modules[__name__], inspect.isfunction)
     assert len(functions) > 25, 'Test cases seems to be low. Work harder man...'
 
 def test_function_repeatations():
-    functions = inspect.getmembers(test_session4, inspect.isfunction)
+    functions = inspect.getmembers(session4, inspect.isfunction)
     names = []
     for function in functions:
         names.append(function)
