@@ -1,7 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/aSZOkvTK)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=15324924&assignment_repo_type=AssignmentRepo)
-# epai5session4-template
-
 # Qualean Class
 
 Qualean class that is inspired by Boolean+Quantum concepts. We can assign it only 3 possible real states. True, False, and Maybe (1, 0, -1) but it internally picks an imaginary state. The moment you assign it a real number, it immediately finds an imaginary number random.uniform(-1, 1) multiplies with it, and stores that number internally after using Banker rounding to the 10th decimal place. To understand this further.. imagine picking 100 times any number from 1, 0 or -1. You want to store this list. But before you can store it, the quantum nature of this class is going to pick another number (random.uniform(-1, 1)) and multiply it with the number you want to store. So if I wanted to store 1, 0, 1, -1, -1.. it might get stored as 0.00123123, 0, -0.123123, 0.63463, -0.36343. 
