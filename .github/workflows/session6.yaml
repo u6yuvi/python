@@ -25,4 +25,4 @@ jobs:
       
     - name: Run pytest
       run: |
-        pytest exercise6/test_session6.py
+        pytest basic/exercise6/test_session6.py
