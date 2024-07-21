@@ -27,6 +27,9 @@ jobs:
           ls
           cd basic/exercise6/
           ls
+    - name: Grant Read Permissions
+      run: |
+        chmod +r basic/exercise6/
     - name: Run pytest
       run: |
-        pytest basic/exercise6/test_session6.py
+        pytest basic/exercise6/
