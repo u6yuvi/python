@@ -4,6 +4,7 @@ from session6 import check_docstring_len
 import pytest
 import inspect
 import re
+print("A",os.getcwd())
 
 def test_session6_readme_exists():
     """
