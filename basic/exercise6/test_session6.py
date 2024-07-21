@@ -10,13 +10,13 @@ def test_session6_readme_exists():
     """
     Test to check if Readme file exists
     """
-    assert os.path.isfile("README.md"), "README.md file missing!"
+    assert os.path.isfile("./basic/exercise6/README.md"), "README.md file missing!"
 
 def test_session6_readme_500_words():
     """
     Test to check if Readme file has more than 500 words
     """
-    readme_words=[word for line in open('README.md', 'r', encoding="utf-8") for word in line.split()]
+    readme_words=[word for line in open('./basic/exercise6/README.md', 'r', encoding="utf-8") for word in line.split()]
     assert len(readme_words) >= 500, "Make your README.md file interesting! Add atleast 500 words"
 
 
@@ -24,7 +24,7 @@ def test_session5_readme_file_for_more_than_10_hashes():
     """
     Test if Redme has 10 headers
     """
-    f = open("README.md", "r", encoding="utf-8")
+    f = open("./basic/exercise6/README.md", "r", encoding="utf-8")
     content = f.read()
     f.close()
     assert content.count("#") >= 10
