@@ -32,4 +32,4 @@ jobs:
         chmod +r basic/exercise6/
     - name: Run pytest
       run: |
-        pytest basic/exercise6/
+        pytest basic/exercise6/ -s
