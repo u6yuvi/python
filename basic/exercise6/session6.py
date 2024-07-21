@@ -1,7 +1,8 @@
 from functools import wraps
 
 # q1
-
+import os
+print("A",os.curdir())
 
 def check_docstring_len(min_length):
     """
