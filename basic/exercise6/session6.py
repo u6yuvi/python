@@ -2,7 +2,7 @@ from functools import wraps
 
 # q1
 import os
-print("A",os.curdir())
+print("A",os.getcwd())
 
 def check_docstring_len(min_length):
     """
