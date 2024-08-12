@@ -28,7 +28,6 @@ def test_indentations():
     lines = inspect.getsource(session8)
     spaces = re.findall('\n +.', lines)
     for enum, space in enumerate(spaces):
-        print(enum,len(space),space)
         assert len(space) % 4 == 2, "Your script contains misplaced indentations"
         assert len(re.sub(r'[^ ]', '', space)) % 4 == 0, "Your code indentation does not follow PEP8 guidelines"
 
